@@ -1,0 +1,34 @@
+#!/bin/bash
+#SBATCH -A uot195
+#SBATCH --job-name="twitter"
+#SBATCH --output="twitter.distr.out"
+#SBATCH --partition=compute
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=128
+#SBATCH --mem=249208M
+#SBATCH --export=ALL 
+#SBATCH --time=29
+
+export HADOOP_CONF_DIR=/home/$USER/expansecluster
+module load cpu/0.15.4 gcc/7.5.0 openjdk
+SW=/expanse/lustre/projects/uot195/fegaras
+export HADOOP_HOME=$SW/hadoop-3.2.2
+export MYHADOOP_HOME=$SW/myhadoop
+PATH="$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$MYHADOOP_HOME/bin:$PATH"
+
+myhadoop-configure.sh -s /scratch/$USER/job_$SLURM_JOBID -i "s/$/.ib.cluster/"
+
+cp $HADOOP_CONF_DIR/slaves $HADOOP_CONF_DIR/workers
+
+start-dfs.sh
+start-yarn.sh
+
+hdfs dfs -mkdir -p /user/$USER
+hdfs dfs -put $SW/large-twitter.csv /user/$USER/large-twitter.csv
+hadoop jar twitter.jar Twitter /user/$USER/large-twitter.csv /user/$USER/temp /user/$USER/output
+rm -f large-output.txt
+hdfs dfs -getmerge /user/$USER/output/ large-output.txt
+
+stop-yarn.sh
+stop-dfs.sh
+myhadoop-cleanup.sh
