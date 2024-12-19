@@ -1,0 +1,853 @@
+
+The following have been reloaded with a version change:
+  1) cpu/0.17.3b => cpu/0.15.4
+
+myHadoop: Using HADOOP_HOME=/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2
+myHadoop: Using MH_SCRATCH_DIR=/scratch/ggupta1/job_34820882
+myHadoop: Using JAVA_HOME=/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/openjdk-11.0.2-k5ezeyjgjeqmehyvrmmpymaguuf2qzsk
+myHadoop: Generating Hadoop configuration in directory in /home/ggupta1/expansecluster...
+myHadoop: Backing up old config dir to /home/ggupta1/expansecluster.16...
+renamed '/home/ggupta1/expansecluster' -> '/home/ggupta1/expansecluster.16'
+myHadoop: Designating exp-10-42.ib.cluster as master node (namenode, secondary namenode, and jobtracker)
+myHadoop: The following nodes will be slaves (datanode, tasktracer):
+exp-10-42.ib.cluster
+exp-10-43.ib.cluster
+WARNING: /scratch/ggupta1/job_34820882/pids does not exist. Creating.
+WARNING: /scratch/ggupta1/job_34820882/logs does not exist. Creating.
+2024-11-02 14:06:21,686 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = exp-10-42/198.202.101.185
+STARTUP_MSG:   args = [-format, -nonInteractive, -force]
+STARTUP_MSG:   version = 3.2.2
+STARTUP_MSG:   classpath = /home/ggupta1/expansecluster:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/stax2-api-3.1.4.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/kerby-util-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/re2j-1.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/curator-recipes-2.13.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/curator-client-2.13.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/hadoop-auth-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jackson-core-2.9.10.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jetty-util-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/commons-collections-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jersey-server-1.19.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jsr305-3.0.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/htrace-core4-4.1.0-incubating.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/commons-lang3-3.7.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jaxb-api-2.2.11.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/commons-math3-3.1.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/paranamer-2.3.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jettison-1.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/j2objc-annotations-1.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/httpcore-4.4.13.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/kerb-server-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jcip-annotations-1.0-1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/kerb-crypto-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/javax.servlet-api-3.1.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/kerby-asn1-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/asm-5.0.4.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/javax.activation-api-1.2.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/kerby-pkix-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/metrics-core-3.2.4.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/json-smart-2.3.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jersey-core-1.19.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jackson-annotations-2.9.10.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/kerb-common-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jsch-0.1.55.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jetty-xml-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/commons-text-1.4.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jetty-security-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/audience-annotations-0.5.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/kerb-client-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/curator-framework-2.13.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/kerby-xdr-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/kerb-util-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/failureaccess-1.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/commons-cli-1.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/snappy-java-1.0.5.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jetty-http-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jetty-io-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jersey-servlet-1.19.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/accessors-smart-1.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/commons-logging-1.1.3.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jsp-api-2.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/animal-sniffer-annotations-1.17.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/netty-3.10.6.Final.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/commons-configuration2-2.1.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/gson-2.2.4.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/zookeeper-3.4.13.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/woodstox-core-5.0.3.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/dnsjava-2.1.7.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/kerb-simplekdc-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/kerby-config-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/commons-net-3.6.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/kerb-admin-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jul-to-slf4j-1.7.25.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/commons-codec-1.11.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/httpclient-4.5.13.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/kerb-core-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/hadoop-annotations-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/error_prone_annotations-2.2.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jackson-databind-2.9.10.4.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/guava-27.0-jre.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/kerb-identity-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/checker-qual-2.5.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jsr311-api-1.1.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/slf4j-api-1.7.25.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/commons-beanutils-1.9.4.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jersey-json-1.19.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jetty-webapp-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/commons-compress-1.19.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jetty-server-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/token-provider-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/commons-io-2.5.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/nimbus-jose-jwt-7.9.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/log4j-1.2.17.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/avro-1.7.7.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/lib/jetty-servlet-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/hadoop-kms-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/hadoop-common-3.2.2-tests.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/hadoop-common-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/common/hadoop-nfs-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/nimbus-jose-jwt-7.9.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/commons-text-1.4.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jcip-annotations-1.0-1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jersey-core-1.19.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/kerby-pkix-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/kerby-asn1-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/guava-27.0-jre.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jaxb-impl-2.2.3-1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jetty-xml-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jetty-security-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jackson-annotations-2.9.10.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/audience-annotations-0.5.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/javax.activation-api-1.2.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jettison-1.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/json-simple-1.1.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/javax.servlet-api-3.1.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/commons-collections-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jsr305-3.0.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/hadoop-annotations-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/commons-compress-1.19.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/commons-io-2.5.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/commons-net-3.6.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/kerby-util-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/kerb-core-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/curator-recipes-2.13.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/kerb-identity-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/dnsjava-2.1.7.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/httpclient-4.5.13.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/accessors-smart-1.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jersey-servlet-1.19.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/netty-all-4.1.48.Final.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/j2objc-annotations-1.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/htrace-core4-4.1.0-incubating.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/woodstox-core-5.0.3.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/commons-configuration2-2.1.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jersey-server-1.19.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/okhttp-2.7.5.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/kerb-crypto-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/kerb-server-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jetty-http-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/curator-framework-2.13.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jetty-server-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jackson-jaxrs-1.9.13.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/curator-client-2.13.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/kerb-common-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/kerb-util-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jersey-json-1.19.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/kerby-xdr-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jetty-io-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jetty-webapp-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jsr311-api-1.1.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jackson-databind-2.9.10.4.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jsch-0.1.55.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/avro-1.7.7.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/kerb-client-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/httpcore-4.4.13.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/snappy-java-1.0.5.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/commons-beanutils-1.9.4.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/kerb-simplekdc-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/failureaccess-1.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/gson-2.2.4.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/re2j-1.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/okio-1.6.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/zookeeper-3.4.13.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/token-provider-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/commons-math3-3.1.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/netty-3.10.6.Final.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/hadoop-auth-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/asm-5.0.4.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jetty-util-ajax-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jetty-util-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jaxb-api-2.2.11.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/checker-qual-2.5.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/commons-lang3-3.7.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jackson-xc-1.9.13.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jetty-servlet-9.4.20.v20190813.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/error_prone_annotations-2.2.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/stax2-api-3.1.4.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/animal-sniffer-annotations-1.17.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/commons-codec-1.11.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/paranamer-2.3.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/kerb-admin-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/json-smart-2.3.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/kerby-config-1.0.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/lib/jackson-core-2.9.10.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/hadoop-hdfs-client-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/hadoop-hdfs-native-client-3.2.2-tests.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/hadoop-hdfs-rbf-3.2.2-tests.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/hadoop-hdfs-client-3.2.2-tests.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/hadoop-hdfs-rbf-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/hadoop-hdfs-nfs-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/hadoop-hdfs-native-client-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/hadoop-hdfs-3.2.2-tests.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/hdfs/hadoop-hdfs-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/mapreduce/lib/junit-4.11.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-uploader-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-nativetask-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.2.2-tests.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-common-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-app-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/ehcache-3.3.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/jersey-client-1.19.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/json-io-2.5.1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/snakeyaml-1.16.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/guice-servlet-4.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/objenesis-1.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/jersey-guice-1.19.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/HikariCP-java7-2.4.12.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/bcprov-jdk15on-1.60.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/jackson-jaxrs-base-2.9.10.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/metrics-core-3.2.4.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/aopalliance-1.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/bcpkix-jdk15on-1.60.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/javax.inject-1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/fst-2.50.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/guice-4.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/jackson-jaxrs-json-provider-2.9.10.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/swagger-annotations-1.5.4.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/jackson-module-jaxb-annotations-2.9.10.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/lib/java-util-1.9.0.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-server-web-proxy-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-server-timeline-pluginstorage-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-api-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-server-router-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-server-common-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-server-tests-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-submarine-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-services-api-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-client-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-registry-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-services-core-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-common-3.2.2.jar:/expanse/lustre/projects/uot195/fegaras/hadoop-3.2.2/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-3.2.2.jar
+STARTUP_MSG:   build = Unknown -r 7a3bc90b05f257c8ace2f76d74264906f0f7a932; compiled by 'hexiaoqiao' on 2021-01-03T09:26Z
+STARTUP_MSG:   java = 11.0.2
+************************************************************/
+2024-11-02 14:06:21,693 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+2024-11-02 14:06:21,755 INFO namenode.NameNode: createNameNode [-format, -nonInteractive, -force]
+2024-11-02 14:06:22,060 INFO common.Util: Assuming 'file' scheme for path /scratch/ggupta1/job_34820882/namenode_data in configuration.
+2024-11-02 14:06:22,060 INFO common.Util: Assuming 'file' scheme for path /scratch/ggupta1/job_34820882/namenode_data in configuration.
+Formatting using clusterid: CID-704349e2-03a5-436e-a616-39ab4994514f
+2024-11-02 14:06:22,090 INFO namenode.FSEditLog: Edit logging is async:true
+2024-11-02 14:06:22,112 INFO namenode.FSNamesystem: KeyProvider: null
+2024-11-02 14:06:22,113 INFO namenode.FSNamesystem: fsLock is fair: true
+2024-11-02 14:06:22,113 INFO namenode.FSNamesystem: Detailed lock hold time metrics enabled: false
+2024-11-02 14:06:22,145 INFO namenode.FSNamesystem: fsOwner             = ggupta1 (auth:SIMPLE)
+2024-11-02 14:06:22,145 INFO namenode.FSNamesystem: supergroup          = supergroup
+2024-11-02 14:06:22,145 INFO namenode.FSNamesystem: isPermissionEnabled = true
+2024-11-02 14:06:22,145 INFO namenode.FSNamesystem: HA Enabled: false
+2024-11-02 14:06:22,248 INFO common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2024-11-02 14:06:22,256 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit: configured=1000, counted=60, effected=1000
+2024-11-02 14:06:22,256 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+2024-11-02 14:06:22,259 INFO blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2024-11-02 14:06:22,260 INFO blockmanagement.BlockManager: The block deletion will start around 2024 Nov 02 14:06:22
+2024-11-02 14:06:22,261 INFO util.GSet: Computing capacity for map BlocksMap
+2024-11-02 14:06:22,261 INFO util.GSet: VM type       = 64-bit
+2024-11-02 14:06:22,262 INFO util.GSet: 2.0% max memory 30.0 GB = 613.8 MB
+2024-11-02 14:06:22,262 INFO util.GSet: capacity      = 2^26 = 67108864 entries
+2024-11-02 14:06:22,295 INFO blockmanagement.BlockManager: Storage policy satisfier is disabled
+2024-11-02 14:06:22,295 INFO blockmanagement.BlockManager: dfs.block.access.token.enable = false
+2024-11-02 14:06:22,300 INFO Configuration.deprecation: No unit for dfs.namenode.safemode.extension(30000) assuming MILLISECONDS
+2024-11-02 14:06:22,300 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+2024-11-02 14:06:22,300 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.min.datanodes = 0
+2024-11-02 14:06:22,300 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.extension = 30000
+2024-11-02 14:06:22,300 INFO blockmanagement.BlockManager: defaultReplication         = 3
+2024-11-02 14:06:22,301 INFO blockmanagement.BlockManager: maxReplication             = 512
+2024-11-02 14:06:22,301 INFO blockmanagement.BlockManager: minReplication             = 1
+2024-11-02 14:06:22,301 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+2024-11-02 14:06:22,301 INFO blockmanagement.BlockManager: redundancyRecheckInterval  = 3000ms
+2024-11-02 14:06:22,301 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+2024-11-02 14:06:22,301 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+2024-11-02 14:06:22,318 INFO namenode.FSDirectory: GLOBAL serial map: bits=29 maxEntries=536870911
+2024-11-02 14:06:22,318 INFO namenode.FSDirectory: USER serial map: bits=24 maxEntries=16777215
+2024-11-02 14:06:22,318 INFO namenode.FSDirectory: GROUP serial map: bits=24 maxEntries=16777215
+2024-11-02 14:06:22,318 INFO namenode.FSDirectory: XATTR serial map: bits=24 maxEntries=16777215
+2024-11-02 14:06:22,326 INFO util.GSet: Computing capacity for map INodeMap
+2024-11-02 14:06:22,326 INFO util.GSet: VM type       = 64-bit
+2024-11-02 14:06:22,327 INFO util.GSet: 1.0% max memory 30.0 GB = 306.9 MB
+2024-11-02 14:06:22,327 INFO util.GSet: capacity      = 2^25 = 33554432 entries
+2024-11-02 14:06:22,341 INFO namenode.FSDirectory: ACLs enabled? false
+2024-11-02 14:06:22,341 INFO namenode.FSDirectory: POSIX ACL inheritance enabled? true
+2024-11-02 14:06:22,341 INFO namenode.FSDirectory: XAttrs enabled? true
+2024-11-02 14:06:22,341 INFO namenode.NameNode: Caching file names occurring more than 10 times
+2024-11-02 14:06:22,347 INFO snapshot.SnapshotManager: Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2024-11-02 14:06:22,348 INFO snapshot.SnapshotManager: SkipList is disabled
+2024-11-02 14:06:22,352 INFO util.GSet: Computing capacity for map cachedBlocks
+2024-11-02 14:06:22,352 INFO util.GSet: VM type       = 64-bit
+2024-11-02 14:06:22,352 INFO util.GSet: 0.25% max memory 30.0 GB = 76.7 MB
+2024-11-02 14:06:22,352 INFO util.GSet: capacity      = 2^23 = 8388608 entries
+2024-11-02 14:06:22,364 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2024-11-02 14:06:22,364 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
+2024-11-02 14:06:22,364 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2024-11-02 14:06:22,367 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+2024-11-02 14:06:22,367 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2024-11-02 14:06:22,368 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+2024-11-02 14:06:22,368 INFO util.GSet: VM type       = 64-bit
+2024-11-02 14:06:22,368 INFO util.GSet: 0.029999999329447746% max memory 30.0 GB = 9.2 MB
+2024-11-02 14:06:22,369 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+2024-11-02 14:06:22,389 INFO namenode.FSImage: Allocated new BlockPoolId: BP-1786856277-198.202.101.185-1730581582383
+2024-11-02 14:06:22,400 INFO common.Storage: Storage directory /scratch/ggupta1/job_34820882/namenode_data has been successfully formatted.
+2024-11-02 14:06:22,427 INFO namenode.FSImageFormatProtobuf: Saving image file /scratch/ggupta1/job_34820882/namenode_data/current/fsimage.ckpt_0000000000000000000 using no compression
+2024-11-02 14:06:22,517 INFO namenode.FSImageFormatProtobuf: Image file /scratch/ggupta1/job_34820882/namenode_data/current/fsimage.ckpt_0000000000000000000 of size 402 bytes saved in 0 seconds .
+2024-11-02 14:06:22,532 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+2024-11-02 14:06:22,536 INFO namenode.FSImage: FSImageSaver clean checkpoint: txid=0 when meet shutdown.
+2024-11-02 14:06:22,537 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at exp-10-42/198.202.101.185
+************************************************************/
+Starting namenodes on [exp-10-42.ib.cluster]
+Starting datanodes
+WARNING: HADOOP_SECURE_DN_PID_DIR has been replaced by HADOOP_SECURE_PID_DIR. Using value of HADOOP_SECURE_DN_PID_DIR.
+exp-10-42: WARNING: HADOOP_SECURE_DN_PID_DIR has been replaced by HADOOP_SECURE_PID_DIR. Using value of HADOOP_SECURE_DN_PID_DIR.
+exp-10-43: WARNING: HADOOP_SECURE_DN_PID_DIR has been replaced by HADOOP_SECURE_PID_DIR. Using value of HADOOP_SECURE_DN_PID_DIR.
+exp-10-43: WARNING: /scratch/ggupta1/job_34820882/pids does not exist. Creating.
+exp-10-43: WARNING: /scratch/ggupta1/job_34820882/logs does not exist. Creating.
+Starting secondary namenodes [exp-10-42.ib.cluster]
+WARNING: YARN_LOG_DIR has been replaced by HADOOP_LOG_DIR. Using value of YARN_LOG_DIR.
+WARNING: YARN_PID_DIR has been replaced by HADOOP_PID_DIR. Using value of YARN_PID_DIR.
+Starting resourcemanager
+WARNING: YARN_LOG_DIR has been replaced by HADOOP_LOG_DIR. Using value of YARN_LOG_DIR.
+WARNING: YARN_PID_DIR has been replaced by HADOOP_PID_DIR. Using value of YARN_PID_DIR.
+Starting nodemanagers
+WARNING: YARN_LOG_DIR has been replaced by HADOOP_LOG_DIR. Using value of YARN_LOG_DIR.
+WARNING: YARN_PID_DIR has been replaced by HADOOP_PID_DIR. Using value of YARN_PID_DIR.
+exp-10-42: WARNING: YARN_LOG_DIR has been replaced by HADOOP_LOG_DIR. Using value of YARN_LOG_DIR.
+exp-10-42: WARNING: YARN_PID_DIR has been replaced by HADOOP_PID_DIR. Using value of YARN_PID_DIR.
+exp-10-43: WARNING: YARN_LOG_DIR has been replaced by HADOOP_LOG_DIR. Using value of YARN_LOG_DIR.
+exp-10-43: WARNING: YARN_PID_DIR has been replaced by HADOOP_PID_DIR. Using value of YARN_PID_DIR.
+WARNING: YARN_LOG_DIR has been replaced by HADOOP_LOG_DIR. Using value of YARN_LOG_DIR.
+WARNING: YARN_PID_DIR has been replaced by HADOOP_PID_DIR. Using value of YARN_PID_DIR.
+WARNING: Use of this script to start the MR JobHistory daemon is deprecated.
+WARNING: Attempting to execute replacement "mapred --daemon start" instead.
+WARNING: HADOOP_MAPRED_LOG_DIR has been replaced by HADOOP_LOG_DIR. Using value of HADOOP_MAPRED_LOG_DIR.
+2024-11-02 14:06:47,806 INFO pig.ExecTypeProvider: Trying ExecType : LOCAL
+2024-11-02 14:06:47,807 INFO pig.ExecTypeProvider: Trying ExecType : MAPREDUCE
+2024-11-02 14:06:47,807 INFO pig.ExecTypeProvider: Picked MAPREDUCE as the ExecType
+2024-11-02 14:06:47,840 [main] INFO  org.apache.pig.Main - Apache Pig version 0.17.0 (r1797386) compiled Jun 02 2017, 15:41:58
+2024-11-02 14:06:47,840 [main] INFO  org.apache.pig.Main - Logging error messages to: /home/ggupta1/project6/pig_1730581607831.log
+2024-11-02 14:06:48,039 [main] INFO  org.apache.pig.impl.util.Utils - Default bootup file /home/ggupta1/.pigbootup not found
+2024-11-02 14:06:48,070 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2024-11-02 14:06:48,070 [main] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine - Connecting to hadoop file system at: hdfs://exp-10-42.ib.cluster:54310
+2024-11-02 14:06:48,334 [main] INFO  org.apache.pig.PigServer - Pig Script ID for the session: PIG-graph.pig-4f554995-2dcc-4259-870a-0ad41fef6945
+2024-11-02 14:06:48,334 [main] WARN  org.apache.pig.PigServer - ATS is disabled since yarn.timeline-service.enabled set to false
+2024-11-02 14:06:48,702 [main] INFO  org.apache.pig.tools.pigstats.ScriptState - Pig features used in the script: GROUP_BY
+2024-11-02 14:06:48,721 [main] INFO  org.apache.pig.data.SchemaTupleBackend - Key [pig.schematuple] was not set... will not generate code.
+2024-11-02 14:06:48,737 [main] INFO  org.apache.pig.newplan.logical.optimizer.LogicalPlanOptimizer - {RULES_ENABLED=[AddForEach, ColumnMapKeyPrune, ConstantCalculator, GroupByConstParallelSetter, LimitOptimizer, LoadTypeCastInserter, MergeFilter, MergeForEach, NestedLimitOptimizer, PartitionFilterOptimizer, PredicatePushdownOptimizer, PushDownForEachFlatten, PushUpFilter, SplitFilter, StreamTypeCastInserter]}
+2024-11-02 14:06:48,780 [main] INFO  org.apache.pig.impl.util.SpillableMemoryManager - Selected heap (G1 Old Gen) of size 1048576000 to monitor. collectionUsageThreshold = 734003200, usageThreshold = 734003200
+2024-11-02 14:06:48,803 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MRCompiler - File concatenation threshold: 100 optimistic? false
+2024-11-02 14:06:48,812 [main] INFO  org.apache.pig.backend.hadoop.executionengine.util.CombinerOptimizerUtil - Choosing to move algebraic foreach to combiner
+2024-11-02 14:06:48,816 [main] INFO  org.apache.pig.backend.hadoop.executionengine.util.CombinerOptimizerUtil - Choosing to move algebraic foreach to combiner
+2024-11-02 14:06:48,826 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer - MR plan size before optimization: 2
+2024-11-02 14:06:48,826 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer - MR plan size after optimization: 2
+2024-11-02 14:06:48,870 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at exp-10-42.ib.cluster/10.22.10.42:8032
+2024-11-02 14:06:48,975 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+2024-11-02 14:06:48,982 [main] INFO  org.apache.pig.tools.pigstats.mapreduce.MRScriptState - Pig script settings are added to the job
+2024-11-02 14:06:48,985 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.reduce.markreset.buffer.percent is deprecated. Instead, use mapreduce.reduce.markreset.buffer.percent
+2024-11-02 14:06:48,985 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - mapred.job.reduce.markreset.buffer.percent is not set, set to default 0.3
+2024-11-02 14:06:48,987 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.output.compress is deprecated. Instead, use mapreduce.output.fileoutputformat.compress
+2024-11-02 14:06:48,988 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Reduce phase detected, estimating # of required reducers.
+2024-11-02 14:06:48,988 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Using reducer estimator: org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.InputSizeReducerEstimator
+2024-11-02 14:06:48,993 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.InputSizeReducerEstimator - BytesPerReducer=1000000000 maxReducers=999 totalInputFileSize=140791854
+2024-11-02 14:06:48,993 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Setting Parallelism to 1
+2024-11-02 14:06:48,993 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+2024-11-02 14:06:48,993 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - This job cannot be converted run in-process
+2024-11-02 14:06:48,999 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.submit.replication is deprecated. Instead, use mapreduce.client.submit.file.replication
+2024-11-02 14:06:49,133 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/expanse/lustre/projects/uot195/fegaras/pig-0.17.0/pig-0.17.0-core-h2.jar to DistributedCache through /tmp/temp-1870199985/tmp1775132734/pig-0.17.0-core-h2.jar
+2024-11-02 14:06:49,152 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/expanse/lustre/projects/uot195/fegaras/pig-0.17.0/lib/automaton-1.11-8.jar to DistributedCache through /tmp/temp-1870199985/tmp237124860/automaton-1.11-8.jar
+2024-11-02 14:06:49,581 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/expanse/lustre/projects/uot195/fegaras/pig-0.17.0/lib/antlr-runtime-3.4.jar to DistributedCache through /tmp/temp-1870199985/tmp1572615433/antlr-runtime-3.4.jar
+2024-11-02 14:06:49,600 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/expanse/lustre/projects/uot195/fegaras/pig-0.17.0/lib/joda-time-2.9.3.jar to DistributedCache through /tmp/temp-1870199985/tmp-692622037/joda-time-2.9.3.jar
+2024-11-02 14:06:49,608 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Setting up single store job
+2024-11-02 14:06:49,611 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Key [pig.schematuple] is false, will not generate code.
+2024-11-02 14:06:49,611 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Starting process to move generated code to distributed cacche
+2024-11-02 14:06:49,611 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Setting key [pig.schematuple.classes] with classes to deserialize []
+2024-11-02 14:06:49,664 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 1 map-reduce job(s) waiting for submission.
+2024-11-02 14:06:49,671 [JobControl] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at exp-10-42.ib.cluster/10.22.10.42:8032
+2024-11-02 14:06:49,683 [JobControl] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+2024-11-02 14:06:49,758 [JobControl] INFO  org.apache.hadoop.mapreduce.JobResourceUploader - Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/ggupta1/.staging/job_1730581597747_0001
+2024-11-02 14:06:49,771 [JobControl] WARN  org.apache.hadoop.mapreduce.JobResourceUploader - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2024-11-02 14:06:49,786 [JobControl] INFO  org.apache.pig.builtin.PigStorage - Using PigTextInputFormat
+2024-11-02 14:06:49,789 [JobControl] INFO  org.apache.hadoop.mapreduce.lib.input.FileInputFormat - Total input files to process : 1
+2024-11-02 14:06:49,789 [JobControl] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths to process : 1
+2024-11-02 14:06:49,805 [JobControl] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths (combined) to process : 1
+2024-11-02 14:06:49,845 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter - number of splits:1
+2024-11-02 14:06:49,880 [JobControl] INFO  org.apache.hadoop.conf.Configuration.deprecation - yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+2024-11-02 14:06:49,971 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter - Submitting tokens for job: job_1730581597747_0001
+2024-11-02 14:06:49,972 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter - Executing with tokens: []
+2024-11-02 14:06:50,044 [JobControl] INFO  org.apache.hadoop.mapred.YARNRunner - Job jar is not present. Not adding any jar to the list of resources.
+2024-11-02 14:06:50,079 [JobControl] INFO  org.apache.hadoop.conf.Configuration - resource-types.xml not found
+2024-11-02 14:06:50,080 [JobControl] INFO  org.apache.hadoop.yarn.util.resource.ResourceUtils - Unable to find 'resource-types.xml'.
+2024-11-02 14:06:50,414 [JobControl] INFO  org.apache.hadoop.yarn.client.api.impl.YarnClientImpl - Submitted application application_1730581597747_0001
+2024-11-02 14:06:50,433 [JobControl] INFO  org.apache.hadoop.mapreduce.Job - The url to track the job: http://exp-10-42.ib.cluster:8088/proxy/application_1730581597747_0001/
+2024-11-02 14:06:50,434 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - HadoopJobId: job_1730581597747_0001
+2024-11-02 14:06:50,434 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Processing aliases graph_data,neighbor_counts,node_neighbors
+2024-11-02 14:06:50,434 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - detailed locations: M: graph_data[2,13],graph_data[-1,-1],neighbor_counts[6,18],node_neighbors[5,17] C: neighbor_counts[6,18],node_neighbors[5,17] R: neighbor_counts[6,18]
+2024-11-02 14:06:50,440 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 0% complete
+2024-11-02 14:06:50,440 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Running jobs are [job_1730581597747_0001]
+2024-11-02 14:07:12,475 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 8% complete
+2024-11-02 14:07:12,476 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Running jobs are [job_1730581597747_0001]
+2024-11-02 14:07:24,983 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 16% complete
+2024-11-02 14:07:24,983 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Running jobs are [job_1730581597747_0001]
+2024-11-02 14:07:29,986 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 25% complete
+2024-11-02 14:07:29,986 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Running jobs are [job_1730581597747_0001]
+2024-11-02 14:07:34,990 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 50% complete
+2024-11-02 14:07:34,990 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Running jobs are [job_1730581597747_0001]
+2024-11-02 14:07:35,494 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at exp-10-42.ib.cluster/10.22.10.42:8032
+2024-11-02 14:07:35,501 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2024-11-02 14:07:35,973 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at exp-10-42.ib.cluster/10.22.10.42:8032
+2024-11-02 14:07:35,977 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2024-11-02 14:07:36,001 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at exp-10-42.ib.cluster/10.22.10.42:8032
+2024-11-02 14:07:36,003 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2024-11-02 14:07:36,041 [main] INFO  org.apache.pig.tools.pigstats.mapreduce.MRScriptState - Pig script settings are added to the job
+2024-11-02 14:07:36,042 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - mapred.job.reduce.markreset.buffer.percent is not set, set to default 0.3
+2024-11-02 14:07:36,042 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Reduce phase detected, estimating # of required reducers.
+2024-11-02 14:07:36,042 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Using reducer estimator: org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.InputSizeReducerEstimator
+2024-11-02 14:07:36,050 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.InputSizeReducerEstimator - BytesPerReducer=1000000000 maxReducers=999 totalInputFileSize=5708598
+2024-11-02 14:07:36,050 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Setting Parallelism to 1
+2024-11-02 14:07:36,050 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - This job cannot be converted run in-process
+2024-11-02 14:07:36,086 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/expanse/lustre/projects/uot195/fegaras/pig-0.17.0/pig-0.17.0-core-h2.jar to DistributedCache through /tmp/temp-1870199985/tmp-2036445783/pig-0.17.0-core-h2.jar
+2024-11-02 14:07:36,506 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/expanse/lustre/projects/uot195/fegaras/pig-0.17.0/lib/automaton-1.11-8.jar to DistributedCache through /tmp/temp-1870199985/tmp1750125608/automaton-1.11-8.jar
+2024-11-02 14:07:36,524 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/expanse/lustre/projects/uot195/fegaras/pig-0.17.0/lib/antlr-runtime-3.4.jar to DistributedCache through /tmp/temp-1870199985/tmp1735848801/antlr-runtime-3.4.jar
+2024-11-02 14:07:36,539 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/expanse/lustre/projects/uot195/fegaras/pig-0.17.0/lib/joda-time-2.9.3.jar to DistributedCache through /tmp/temp-1870199985/tmp-1729833242/joda-time-2.9.3.jar
+2024-11-02 14:07:36,541 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Setting up single store job
+2024-11-02 14:07:36,541 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Key [pig.schematuple] is false, will not generate code.
+2024-11-02 14:07:36,541 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Starting process to move generated code to distributed cacche
+2024-11-02 14:07:36,541 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Setting key [pig.schematuple.classes] with classes to deserialize []
+2024-11-02 14:07:36,558 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 1 map-reduce job(s) waiting for submission.
+2024-11-02 14:07:36,561 [JobControl] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at exp-10-42.ib.cluster/10.22.10.42:8032
+2024-11-02 14:07:36,566 [JobControl] INFO  org.apache.hadoop.conf.Configuration.deprecation - yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+2024-11-02 14:07:36,572 [JobControl] INFO  org.apache.hadoop.mapreduce.JobResourceUploader - Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/ggupta1/.staging/job_1730581597747_0002
+2024-11-02 14:07:36,573 [JobControl] WARN  org.apache.hadoop.mapreduce.JobResourceUploader - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2024-11-02 14:07:36,586 [JobControl] INFO  org.apache.hadoop.mapreduce.lib.input.FileInputFormat - Total input files to process : 1
+2024-11-02 14:07:36,586 [JobControl] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths to process : 1
+2024-11-02 14:07:36,587 [JobControl] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths (combined) to process : 1
+2024-11-02 14:07:36,616 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter - number of splits:1
+2024-11-02 14:07:36,645 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter - Submitting tokens for job: job_1730581597747_0002
+2024-11-02 14:07:36,645 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter - Executing with tokens: []
+2024-11-02 14:07:36,647 [JobControl] INFO  org.apache.hadoop.mapred.YARNRunner - Job jar is not present. Not adding any jar to the list of resources.
+2024-11-02 14:07:36,865 [JobControl] INFO  org.apache.hadoop.yarn.client.api.impl.YarnClientImpl - Submitted application application_1730581597747_0002
+2024-11-02 14:07:36,870 [JobControl] INFO  org.apache.hadoop.mapreduce.Job - The url to track the job: http://exp-10-42.ib.cluster:8088/proxy/application_1730581597747_0002/
+2024-11-02 14:07:37,059 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - HadoopJobId: job_1730581597747_0002
+2024-11-02 14:07:37,059 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Processing aliases grouped_by_neighbor_count,result
+2024-11-02 14:07:37,059 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - detailed locations: M: result[12,9],grouped_by_neighbor_count[9,28] C: result[12,9],grouped_by_neighbor_count[9,28] R: result[12,9]
+2024-11-02 14:07:51,603 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 75% complete
+2024-11-02 14:07:51,604 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Running jobs are [job_1730581597747_0002]
+2024-11-02 14:07:56,606 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Running jobs are [job_1730581597747_0002]
+2024-11-02 14:07:57,111 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at exp-10-42.ib.cluster/10.22.10.42:8032
+2024-11-02 14:07:57,115 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2024-11-02 14:07:57,173 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at exp-10-42.ib.cluster/10.22.10.42:8032
+2024-11-02 14:07:57,177 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2024-11-02 14:07:57,194 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at exp-10-42.ib.cluster/10.22.10.42:8032
+2024-11-02 14:07:57,196 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2024-11-02 14:07:57,212 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 100% complete
+2024-11-02 14:07:57,221 [main] INFO  org.apache.pig.tools.pigstats.mapreduce.SimplePigStats - Script Statistics: 
+
+HadoopVersion	PigVersion	UserId	StartedAt	FinishedAt	Features
+3.2.2	0.17.0	ggupta1	2024-11-02 14:06:48	2024-11-02 14:07:57	GROUP_BY
+
+Success!
+
+Job Stats (time in seconds):
+JobId	Maps	Reduces	MaxMapTime	MinMapTime	AvgMapTime	MedianMapTime	MaxReduceTime	MinReduceTime	AvgReduceTime	MedianReducetime	Alias	Feature	Outputs
+job_1730581597747_0001	1	1	31	31	31	31	2	2	2	2	graph_data,neighbor_counts,node_neighbors	GROUP_BY,COMBINER	
+job_1730581597747_0002	1	1	3	3	3	3	2	2	2	2	grouped_by_neighbor_count,result	GROUP_BY,COMBINER	hdfs://exp-10-42.ib.cluster:54310/tmp/temp-1870199985/tmp185690697,
+
+Input(s):
+Successfully read 10000000 records (140792243 bytes) from: "/user/ggupta1/large-graph.txt"
+
+Output(s):
+Successfully stored 291 records (2563 bytes) in: "hdfs://exp-10-42.ib.cluster:54310/tmp/temp-1870199985/tmp185690697"
+
+Counters:
+Total records written : 291
+Total bytes written : 2563
+Spillable Memory Manager spill count : 0
+Total bags proactively spilled: 0
+Total records proactively spilled: 0
+
+Job DAG:
+job_1730581597747_0001	->	job_1730581597747_0002,
+job_1730581597747_0002
+
+
+2024-11-02 14:07:57,223 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at exp-10-42.ib.cluster/10.22.10.42:8032
+2024-11-02 14:07:57,225 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2024-11-02 14:07:57,241 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at exp-10-42.ib.cluster/10.22.10.42:8032
+2024-11-02 14:07:57,243 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2024-11-02 14:07:57,258 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at exp-10-42.ib.cluster/10.22.10.42:8032
+2024-11-02 14:07:57,260 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2024-11-02 14:07:57,277 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at exp-10-42.ib.cluster/10.22.10.42:8032
+2024-11-02 14:07:57,280 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2024-11-02 14:07:57,294 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at exp-10-42.ib.cluster/10.22.10.42:8032
+2024-11-02 14:07:57,296 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2024-11-02 14:07:57,310 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at exp-10-42.ib.cluster/10.22.10.42:8032
+2024-11-02 14:07:57,312 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2024-11-02 14:07:57,327 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Success!
+2024-11-02 14:07:57,329 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+2024-11-02 14:07:57,329 [main] INFO  org.apache.pig.data.SchemaTupleBackend - Key [pig.schematuple] was not set... will not generate code.
+2024-11-02 14:07:57,333 [main] INFO  org.apache.hadoop.mapreduce.lib.input.FileInputFormat - Total input files to process : 1
+2024-11-02 14:07:57,333 [main] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths to process : 1
+(1,11313)
+(2,16885)
+(3,20831)
+(4,23470)
+(5,24340)
+(6,24711)
+(7,24268)
+(8,23418)
+(9,22145)
+(10,20814)
+(11,19762)
+(12,18360)
+(13,17333)
+(14,15946)
+(15,14763)
+(16,13873)
+(17,12796)
+(18,11821)
+(19,11124)
+(20,10100)
+(21,9541)
+(22,8930)
+(23,8382)
+(24,7879)
+(25,7313)
+(26,6766)
+(27,6063)
+(28,5598)
+(29,5260)
+(30,4848)
+(31,4587)
+(32,4545)
+(33,4242)
+(34,4065)
+(35,3959)
+(36,3684)
+(37,3519)
+(38,3305)
+(39,3063)
+(40,2736)
+(41,2500)
+(42,2256)
+(43,2097)
+(44,1818)
+(45,1857)
+(46,1679)
+(47,1561)
+(48,1604)
+(49,1546)
+(50,1569)
+(51,1567)
+(52,1601)
+(53,1623)
+(54,1558)
+(55,1433)
+(56,1413)
+(57,1282)
+(58,1217)
+(59,1064)
+(60,1037)
+(61,926)
+(62,759)
+(63,750)
+(64,607)
+(65,512)
+(66,494)
+(67,462)
+(68,403)
+(69,425)
+(70,428)
+(71,405)
+(72,435)
+(73,441)
+(74,461)
+(75,478)
+(76,478)
+(77,517)
+(78,517)
+(79,471)
+(80,531)
+(81,545)
+(82,506)
+(83,528)
+(84,448)
+(85,451)
+(86,393)
+(87,362)
+(88,352)
+(89,317)
+(90,267)
+(91,253)
+(92,213)
+(93,176)
+(94,167)
+(95,130)
+(96,122)
+(97,93)
+(98,106)
+(99,88)
+(100,63)
+(101,71)
+(102,54)
+(103,66)
+(104,75)
+(105,62)
+(106,65)
+(107,73)
+(108,76)
+(109,84)
+(110,88)
+(111,90)
+(112,125)
+(113,107)
+(114,129)
+(115,128)
+(116,147)
+(117,142)
+(118,159)
+(119,143)
+(120,139)
+(121,126)
+(122,123)
+(123,140)
+(124,130)
+(125,132)
+(126,146)
+(127,113)
+(128,111)
+(129,98)
+(130,94)
+(131,95)
+(132,69)
+(133,73)
+(134,67)
+(135,55)
+(136,52)
+(137,37)
+(138,36)
+(139,38)
+(140,26)
+(141,25)
+(142,27)
+(143,23)
+(144,16)
+(145,10)
+(146,3)
+(147,8)
+(148,6)
+(149,8)
+(150,11)
+(151,5)
+(152,6)
+(153,3)
+(154,5)
+(155,4)
+(156,7)
+(157,9)
+(158,9)
+(159,8)
+(160,12)
+(161,8)
+(162,7)
+(163,10)
+(164,15)
+(165,14)
+(166,20)
+(167,19)
+(168,20)
+(169,24)
+(170,23)
+(171,18)
+(172,20)
+(173,25)
+(174,20)
+(175,27)
+(176,33)
+(177,31)
+(178,22)
+(179,18)
+(180,31)
+(181,26)
+(182,23)
+(183,34)
+(184,23)
+(185,19)
+(186,30)
+(187,18)
+(188,33)
+(189,25)
+(190,23)
+(191,22)
+(192,21)
+(193,26)
+(194,17)
+(195,13)
+(196,15)
+(197,12)
+(198,10)
+(199,13)
+(200,7)
+(201,8)
+(202,5)
+(203,8)
+(204,8)
+(205,10)
+(206,2)
+(207,9)
+(208,7)
+(209,5)
+(210,4)
+(211,7)
+(212,1)
+(213,2)
+(217,1)
+(219,1)
+(220,1)
+(221,2)
+(223,1)
+(224,1)
+(234,1)
+(237,1)
+(240,2)
+(244,2)
+(245,1)
+(246,1)
+(247,2)
+(249,2)
+(251,3)
+(252,2)
+(253,4)
+(254,3)
+(255,5)
+(257,3)
+(258,3)
+(259,5)
+(260,3)
+(261,4)
+(262,4)
+(263,4)
+(264,6)
+(265,9)
+(266,2)
+(267,3)
+(268,4)
+(269,5)
+(270,4)
+(271,5)
+(272,3)
+(273,6)
+(274,6)
+(275,7)
+(276,4)
+(277,6)
+(278,4)
+(279,1)
+(280,7)
+(281,3)
+(282,5)
+(283,1)
+(285,1)
+(286,3)
+(288,1)
+(289,2)
+(290,2)
+(291,1)
+(292,2)
+(294,3)
+(295,2)
+(297,1)
+(298,1)
+(300,1)
+(301,1)
+(302,1)
+(303,2)
+(369,2)
+(383,1)
+(385,1)
+(389,2)
+(394,1)
+(396,1)
+(402,1)
+(403,2)
+(405,1)
+(409,1)
+(410,1)
+(413,1)
+(415,1)
+(420,1)
+(422,1)
+(435,1)
+(635,1)
+2024-11-02 14:07:57,379 [main] INFO  org.apache.pig.Main - Pig script completed in 1 minute, 9 seconds and 600 milliseconds (69600 ms)
+WARNING: YARN_LOG_DIR has been replaced by HADOOP_LOG_DIR. Using value of YARN_LOG_DIR.
+WARNING: YARN_PID_DIR has been replaced by HADOOP_PID_DIR. Using value of YARN_PID_DIR.
+WARNING: Use of this script to stop the MR JobHistory daemon is deprecated.
+WARNING: Attempting to execute replacement "mapred --daemon stop" instead.
+WARNING: HADOOP_MAPRED_LOG_DIR has been replaced by HADOOP_LOG_DIR. Using value of HADOOP_MAPRED_LOG_DIR.
+WARNING: YARN_LOG_DIR has been replaced by HADOOP_LOG_DIR. Using value of YARN_LOG_DIR.
+WARNING: YARN_PID_DIR has been replaced by HADOOP_PID_DIR. Using value of YARN_PID_DIR.
+Stopping nodemanagers
+WARNING: YARN_LOG_DIR has been replaced by HADOOP_LOG_DIR. Using value of YARN_LOG_DIR.
+WARNING: YARN_PID_DIR has been replaced by HADOOP_PID_DIR. Using value of YARN_PID_DIR.
+exp-10-42: WARNING: YARN_LOG_DIR has been replaced by HADOOP_LOG_DIR. Using value of YARN_LOG_DIR.
+exp-10-42: WARNING: YARN_PID_DIR has been replaced by HADOOP_PID_DIR. Using value of YARN_PID_DIR.
+exp-10-43: WARNING: YARN_LOG_DIR has been replaced by HADOOP_LOG_DIR. Using value of YARN_LOG_DIR.
+exp-10-43: WARNING: YARN_PID_DIR has been replaced by HADOOP_PID_DIR. Using value of YARN_PID_DIR.
+exp-10-42: WARNING: nodemanager did not stop gracefully after 5 seconds: Trying to kill with kill -9
+exp-10-43: WARNING: nodemanager did not stop gracefully after 5 seconds: Trying to kill with kill -9
+Stopping resourcemanager
+WARNING: YARN_LOG_DIR has been replaced by HADOOP_LOG_DIR. Using value of YARN_LOG_DIR.
+WARNING: YARN_PID_DIR has been replaced by HADOOP_PID_DIR. Using value of YARN_PID_DIR.
+Stopping namenodes on [exp-10-42.ib.cluster]
+Stopping datanodes
+WARNING: HADOOP_SECURE_DN_PID_DIR has been replaced by HADOOP_SECURE_PID_DIR. Using value of HADOOP_SECURE_DN_PID_DIR.
+exp-10-42: WARNING: HADOOP_SECURE_DN_PID_DIR has been replaced by HADOOP_SECURE_PID_DIR. Using value of HADOOP_SECURE_DN_PID_DIR.
+exp-10-43: WARNING: HADOOP_SECURE_DN_PID_DIR has been replaced by HADOOP_SECURE_PID_DIR. Using value of HADOOP_SECURE_DN_PID_DIR.
+Stopping secondary namenodes [exp-10-42.ib.cluster]
+Copying Hadoop logs back to /home/ggupta1/expansecluster/logs...
+'/scratch/ggupta1/job_34820882/logs' -> '/home/ggupta1/expansecluster/logs'
+'/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-namenode-exp-10-42.out' -> '/home/ggupta1/expansecluster/logs/hadoop-ggupta1-namenode-exp-10-42.out'
+'/scratch/ggupta1/job_34820882/logs/SecurityAuth-ggupta1.audit' -> '/home/ggupta1/expansecluster/logs/SecurityAuth-ggupta1.audit'
+'/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-datanode-exp-10-42.out' -> '/home/ggupta1/expansecluster/logs/hadoop-ggupta1-datanode-exp-10-42.out'
+'/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-namenode-exp-10-42.log' -> '/home/ggupta1/expansecluster/logs/hadoop-ggupta1-namenode-exp-10-42.log'
+'/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-datanode-exp-10-42.log' -> '/home/ggupta1/expansecluster/logs/hadoop-ggupta1-datanode-exp-10-42.log'
+'/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-secondarynamenode-exp-10-42.out' -> '/home/ggupta1/expansecluster/logs/hadoop-ggupta1-secondarynamenode-exp-10-42.out'
+'/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-secondarynamenode-exp-10-42.log' -> '/home/ggupta1/expansecluster/logs/hadoop-ggupta1-secondarynamenode-exp-10-42.log'
+'/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-resourcemanager-exp-10-42.out' -> '/home/ggupta1/expansecluster/logs/hadoop-ggupta1-resourcemanager-exp-10-42.out'
+'/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-resourcemanager-exp-10-42.log' -> '/home/ggupta1/expansecluster/logs/hadoop-ggupta1-resourcemanager-exp-10-42.log'
+'/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-nodemanager-exp-10-42.out' -> '/home/ggupta1/expansecluster/logs/hadoop-ggupta1-nodemanager-exp-10-42.out'
+'/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-nodemanager-exp-10-42.log' -> '/home/ggupta1/expansecluster/logs/hadoop-ggupta1-nodemanager-exp-10-42.log'
+'/scratch/ggupta1/job_34820882/logs/userlogs' -> '/home/ggupta1/expansecluster/logs/userlogs'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0002'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/prelaunch.out' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/prelaunch.out'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/prelaunch.err' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/prelaunch.err'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/launch_container.sh' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/launch_container.sh'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/directory.info' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/directory.info'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/stdout' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/stdout'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/stderr' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/stderr'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/syslog' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/syslog'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/prelaunch.out' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/prelaunch.out'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/prelaunch.err' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/prelaunch.err'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/launch_container.sh' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/launch_container.sh'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/directory.info' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/directory.info'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/stdout' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/stdout'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/stderr' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/stderr'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/syslog' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/syslog'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/syslog.shuffle' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/syslog.shuffle'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/prelaunch.out' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/prelaunch.out'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/prelaunch.err' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/prelaunch.err'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/launch_container.sh' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/launch_container.sh'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/directory.info' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/directory.info'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/stdout' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/stdout'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/stderr' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/stderr'
+'/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/syslog' -> '/home/ggupta1/expansecluster/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/syslog'
+removed '/scratch/ggupta1/job_34820882/tmp/dfs/namesecondary/current/VERSION'
+removed '/scratch/ggupta1/job_34820882/tmp/dfs/namesecondary/current/fsimage_0000000000000000000.md5'
+removed '/scratch/ggupta1/job_34820882/tmp/dfs/namesecondary/current/fsimage_0000000000000000089'
+removed '/scratch/ggupta1/job_34820882/tmp/dfs/namesecondary/current/fsimage_0000000000000000089.md5'
+removed '/scratch/ggupta1/job_34820882/tmp/dfs/namesecondary/current/fsimage_0000000000000000000'
+removed '/scratch/ggupta1/job_34820882/tmp/dfs/namesecondary/current/edits_0000000000000000001-0000000000000000089'
+removed directory '/scratch/ggupta1/job_34820882/tmp/dfs/namesecondary/current'
+removed directory '/scratch/ggupta1/job_34820882/tmp/dfs/namesecondary'
+removed directory '/scratch/ggupta1/job_34820882/tmp/dfs'
+removed directory '/scratch/ggupta1/job_34820882/tmp'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/tmp'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/VERSION'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/rbw'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/dfsUsed'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741839_1015.meta'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741825'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741825_1001.meta'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741852'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741851'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741838'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741851_1027.meta'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741838_1014.meta'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741826'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741852_1028.meta'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741826_1002.meta'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741839'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/scanner.cursor'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/VERSION'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data'
+removed '/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-namenode-exp-10-42.out'
+removed '/scratch/ggupta1/job_34820882/logs/SecurityAuth-ggupta1.audit'
+removed '/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-resourcemanager-exp-10-42.out'
+removed '/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-secondarynamenode-exp-10-42.log'
+removed '/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-namenode-exp-10-42.log'
+removed '/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-datanode-exp-10-42.out'
+removed '/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-datanode-exp-10-42.log'
+removed '/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-nodemanager-exp-10-42.log'
+removed '/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-nodemanager-exp-10-42.out'
+removed '/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-resourcemanager-exp-10-42.log'
+removed '/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-secondarynamenode-exp-10-42.out'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/prelaunch.out'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/directory.info'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/syslog.shuffle'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/prelaunch.err'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/syslog'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/stderr'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/launch_container.sh'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003/stdout'
+removed directory '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000003'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/prelaunch.out'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/directory.info'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/prelaunch.err'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/syslog'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/stderr'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/launch_container.sh'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002/stdout'
+removed directory '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000002'
+removed directory '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/prelaunch.out'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/directory.info'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/prelaunch.err'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/syslog'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/stderr'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/launch_container.sh'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001/stdout'
+removed directory '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000001'
+removed directory '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002'
+removed directory '/scratch/ggupta1/job_34820882/logs/userlogs'
+removed directory '/scratch/ggupta1/job_34820882/logs'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/filecache'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/nmPrivate'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/appcache'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/17/.antlr-runtime-3.4.jar.crc'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/17/antlr-runtime-3.4.jar'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/17'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/16/pig-0.17.0-core-h2.jar'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/16/.pig-0.17.0-core-h2.jar.crc'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/16'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/11/.joda-time-2.9.3.jar.crc'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/11/joda-time-2.9.3.jar'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/11'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/14/.automaton-1.11-8.jar.crc'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/14/automaton-1.11-8.jar'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/14'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/15/.joda-time-2.9.3.jar.crc'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/15/joda-time-2.9.3.jar'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/15'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/10/.automaton-1.11-8.jar.crc'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/10/automaton-1.11-8.jar'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/10'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/13/.antlr-runtime-3.4.jar.crc'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/13/antlr-runtime-3.4.jar'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/13'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/12/pig-0.17.0-core-h2.jar'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/12/.pig-0.17.0-core-h2.jar.crc'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/12'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch'
+removed '/scratch/ggupta1/job_34820882/namenode_data/current/VERSION'
+removed '/scratch/ggupta1/job_34820882/namenode_data/current/seen_txid'
+removed '/scratch/ggupta1/job_34820882/namenode_data/current/fsimage_0000000000000000000.md5'
+removed '/scratch/ggupta1/job_34820882/namenode_data/current/edits_inprogress_0000000000000000090'
+removed '/scratch/ggupta1/job_34820882/namenode_data/current/fsimage_0000000000000000000'
+removed '/scratch/ggupta1/job_34820882/namenode_data/current/edits_0000000000000000001-0000000000000000089'
+removed directory '/scratch/ggupta1/job_34820882/namenode_data/current'
+removed directory '/scratch/ggupta1/job_34820882/namenode_data'
+removed directory '/scratch/ggupta1/job_34820882/pids'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/tmp'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/scanner.cursor'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/rbw'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/VERSION'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741839_1015.meta'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741825'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741851_1027.meta'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741852'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741838_1014.meta'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741852_1028.meta'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741851'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741826_1002.meta'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741838'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741826'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741839'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0/blk_1073741825_1001.meta'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0/subdir0'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized/subdir0'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/finalized'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current/dfsUsed'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383/current'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current/BP-1786856277-198.202.101.185-1730581582383'
+removed '/scratch/ggupta1/job_34820882/hdfs_data/current/VERSION'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data/current'
+removed directory '/scratch/ggupta1/job_34820882/hdfs_data'
+removed '/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-datanode-exp-10-43.log'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000003/directory.info'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000003/syslog'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000003/stderr'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000003/prelaunch.err'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000003/syslog.shuffle'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000003/launch_container.sh'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000003/prelaunch.out'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000003/stdout'
+removed directory '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000003'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000002/directory.info'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000002/syslog'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000002/stderr'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000002/prelaunch.err'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000002/launch_container.sh'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000002/prelaunch.out'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000002/stdout'
+removed directory '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002/container_1730581597747_0002_01_000002'
+removed directory '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0002'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000001/directory.info'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000001/syslog'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000001/stderr'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000001/prelaunch.err'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000001/launch_container.sh'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000001/prelaunch.out'
+removed '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000001/stdout'
+removed directory '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001/container_1730581597747_0001_01_000001'
+removed directory '/scratch/ggupta1/job_34820882/logs/userlogs/application_1730581597747_0001'
+removed directory '/scratch/ggupta1/job_34820882/logs/userlogs'
+removed '/scratch/ggupta1/job_34820882/logs/SecurityAuth-ggupta1.audit'
+removed '/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-datanode-exp-10-43.out'
+removed '/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-nodemanager-exp-10-43.log'
+removed '/scratch/ggupta1/job_34820882/logs/hadoop-ggupta1-nodemanager-exp-10-43.out'
+removed directory '/scratch/ggupta1/job_34820882/logs'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/filecache'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/nmPrivate'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/appcache'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/11/.joda-time-2.9.3.jar.crc'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/11/joda-time-2.9.3.jar'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/11'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/16/.pig-0.17.0-core-h2.jar.crc'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/16/pig-0.17.0-core-h2.jar'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/16'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/17/antlr-runtime-3.4.jar'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/17/.antlr-runtime-3.4.jar.crc'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/17'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/10/automaton-1.11-8.jar'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/10/.automaton-1.11-8.jar.crc'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/10'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/13/antlr-runtime-3.4.jar'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/13/.antlr-runtime-3.4.jar.crc'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/13'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/14/automaton-1.11-8.jar'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/14/.automaton-1.11-8.jar.crc'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/14'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/15/.joda-time-2.9.3.jar.crc'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/15/joda-time-2.9.3.jar'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/15'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/12/.pig-0.17.0-core-h2.jar.crc'
+removed '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/12/pig-0.17.0-core-h2.jar'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache/12'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1/filecache'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache/ggupta1'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch/usercache'
+removed directory '/scratch/ggupta1/job_34820882/mapred_scratch'
+removed directory '/scratch/ggupta1/job_34820882/pids'
